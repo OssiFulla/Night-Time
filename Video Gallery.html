@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+
+<html class="no-js"> <!--<![endif]-->
+    
+    <head>
+      <style>@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+:root {
+    --accent: #3DB45E;
+    --dark: #17191D;
+    --light: #f4f4f4;
+    --overlay: rgba(23,25,29,0.8);
+    --ease: all 0.3s ease 0s;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+   width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),url(https://www.proavl-asia.com/img/55e1aac3f0664fc68aafa6db8d868d9f.jpg);
+	background-size: cover;
+	background-attachment:fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+}
+
+nav{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5);
+	width: 90px;
+	overflow: hidden;
+	transition: width 0.2s linear;
+	 box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+}
+.logo{
+	text-align: center;
+	display:flex;
+	transition: all 0.5s ease;
+	margin-left: -15px;
+}
+.logo img{
+	width: 230px;
+	height: 80px;
+	border-radius: 100%;
+}
+.logo span{
+	
+	font-weight: bold;
+	padding: 100px;
+	font-size: 18px;
+	text-transform: uppercase;
+
+}
+a{
+	position: relative;
+	color:#7FFFD4;
+	font-size:15px;
+	display: table;
+	width: 300px;
+	padding: 20px;
+}
+.fa{
+	position: relative;
+	width: 70px;
+	height: 40px;
+	top: 14px;
+	margin-left: -10px;
+	font-size: 25px;
+	text-align: center;
+}
+.nav-item{
+	position: relative;
+	top: 10px;
+	margin-left: 10px;
+}
+a:hover{
+	background: #eee;
+}
+nav:hover{
+	width: 280px;
+	transition: all 0.5s ease;
+}
+
+
+p, button, h1, h4 {
+    color: var(--light);
+}
+
+p, h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+h4, button {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p, h4 {
+    font-size: 18px;
+}
+
+button {
+    cursor: pointer;
+    transition: var(--ease);
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "top__section"
+    "content__section"
+
+}
+
+.top__section {
+    grid-area: top__section;
+    min-height: 370px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 
+    ". header .";
+    background: linear-gradient(var(--overlay),var(--overlay)), url(images/image-17.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header p {
+    max-width: 570px;
+    margin-bottom: 30px;
+}
+
+header button {
+    width: 131px;
+    padding: 12px 0;
+    background-color: var(--accent);
+    border: none;
+}
+
+.content__section {
+    grid-area: content__section;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: 
+    ". playlist__one ."
+    ". playlist__two .";
+    margin-bottom: 60px;
+}
+
+.playlist__one {
+    grid-area: playlist__one;
+}
+
+.playlist__two {
+    grid-area: playlist__two;
+}
+
+.playlist__title {
+    margin: 30px 0;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+}
+
+.video {
+    height: 180px;
+    grid-column-start: span 3;
+    position: relative;
+    transition: var(--ease);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.video:hover {
+    transform: scale(1.02);
+}
+
+.video i {
+    cursor: pointer;
+    font-size: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--light);
+    opacity: 0.85;
+    transition: var(--ease);
+}
+
+.video i:hover {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 1200px) {
+    .video {
+        grid-column-start: span 6;
+        height: 240px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .video {
+        grid-column-start: span 12;
+    }
+}</style>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Video Channel</title>
+        <meta name="description" content="This is my awesome video channel.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="venobox/venobox.css" type="text/css" media="screen" />
+    </head>
+    <body>
+      
+    <nav>
+	<ul>
+		<li><a href="file:///C:/Users/ossi%20fulla/Downloads/Home%20page.html" class="logo">
+		<img src = "https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/318551939_3281830202029860_3532901275342708393_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=730e14&_nc_ohc=hoL3yhSZKncAX9woA4F&_nc_ht=scontent.fmnl17-3.fna&oh=00_AfBOPC43QarBgJijD4VGKfWfFyfOgARla2LAGISi7tp4gw&oe=6393FEAC" alt="">
+		</a>
+		</li>
+		
+		<li><a href="file:///C:/Users/ossi%20fulla/Downloads/About%20Ph.html">
+		<i class="fa fa-heart"></i>
+		<span class="nav-item">ABOUT PHILIPPINES</span>
+		</a></li>
+		
+		<li><a href="file:///C:/Users/ossi%20fulla/Downloads/Tourist%20attractions.html">
+		<i class="fa fa-map-o"></i>
+		<span class="nav-item">TOURIST ATTRACTIONS</span>
+		</a></li>
+		
+		<li><a href="file:///C:/Users/ossi%20fulla/Downloads/Video%20Gallery.html">
+		<i class="fa fa-file-video-o"></i>
+		<span class="nav-item">VIDEO GALLERY</span>
+		</a></li>
+		
+		<li><a href="file:///C:/Users/ossi%20fulla/Downloads/FINALS%20LOGIN.html">
+		<i class="fa fa-envelope"></i>
+		<span class="nav-item">LOG IN</span>
+		</a></li>
+		
+		<li><a href="CU.html" class="cont">
+		<i class="fa fa-user"></i>
+		<span class="nav-item">CONTACT US</span>
+		</a></li>
+		
+		</ul>
+	</nav>
+  
+        <div class="wrapper">
+            <!-- Header -->
+            <section class="top__section">
+                <header>
+                    <h1>VIDEO GALLERY</h1>
+                    <p>Watch how filipinos enjoy the night time</p>
+                    <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/VHgBM3NmrVk" data-gall="myGallery"><button>Watch Now</button></a>
+                </header>
+            </section><!-- End Header Section-->
+            <!-- Content -->
+            <section class="content__section">
+                <div class="playlist__one">
+                    <h4 class="playlist__title">Videos</h4>
+                    <div class="videos">
+                        <div class="video" style="background-image: url(https://b.zmtcdn.com/data/pictures/9/18391879/ccd3adca3410eb90069b7bf1e449833f.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=0BwDhoFOkSk" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(https://i.ytimg.com/vi/of633ZCOMGE/maxresdefault.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=m-Jf9rZ3bOM" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(https://i.ytimg.com/vi/eFC1Wrhtk_A/maxresdefault.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=vAT5-xb4JHs" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(https://media.philstar.com/photos/2019/12/28/bgc_2019-12-28_08-47-19.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=5ZMl7SqgFvA" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(https://r1.community.samsung.com/t5/image/serverpage/image-id/3780838i76606E729CE3076E/image-size/large?v=v2&px=999)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=HwEjIePiv-I" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(https://www.willflyforfood.net/wp-content/uploads/2017/10/poblacion-food-crawl-featured.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=0tRV5QgtgRg" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(https://primer.com.ph/feature/wp-content/uploads/sites/15/2018/11/Poblacion-Philippine-Primer.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/-PxhSP6P028" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(https://i.pinimg.com/originals/e2/3c/b1/e23cb16176f4e89014801ca38a6254eb.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/2dTGPhxHkfE" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist__two">
+                    <h4 class="playlist__title">NIGHT TIME</h4>
+                    <div class="videos">
+                        <div class="video">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/MI3-esEWahM" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(images/image-10.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/SY3jQ9lr-rk" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(images/image-11.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/QT4SdZyNRy4" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(images/image-12.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/fquIXhC1fRI" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(images/image-13.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/Bmu2TOjNSAA" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(images/image-14.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/tpV9m75RPoA" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(images/image-15.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/mZA0_9Asqeg" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                        <div class="video" style="background-image: url(images/image-16.jpg)">
+                            <a class="venobox" data-autoplay="true" data-vbtype="video" href="https://youtu.be/1t2W2lN8IZk" data-gall="myGallery"><i class="fas fa-play-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End Content Section -->
+        </div><!-- End Wrapper -->
+        <script type="text/javascript" src="jquery/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="venobox/venobox.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.venobox').venobox({
+                    closeColor: '#f4f4f4',
+                    spinColor: '#f4f4f4',
+                    arrowsColor: '#f4f4f4',
+                    closeBackground: '#17191D',
+                    overlayColor: 'rgba(23,25,29,0.8)'
+                }); 
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,136 @@
+<!-- IIT406-Computer Programming 3 -->
+<!-- Ossi Fulla -->
+<!-- DA2A -->
+
+<!-- CSS code -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Login Form </title>
+	</head>
+	
+<style>
+body{
+font-family: Arial;
+}
+	
+p{
+padding: 0px;
+margin: 0px;
+}
+
+img{
+height: 20%;
+width: 20%;
+border-radius: 50%;
+}
+	
+label{
+float: left;
+font-weight: bold;
+}
+
+button{
+background-color:#4CAF50; 
+color: white;
+padding: 15px;
+width: 100%;   
+border: none; 
+cursor: pointer;
+}
+
+input[type=text], input[type=password]{
+width: 95%;
+padding: 15px;
+}
+	
+input[type=checkbox]{
+float: left;
+}
+	
+input: invalid{
+}
+
+.form{
+border: thick;
+border-style: solid;
+padding-top: 0px;
+padding-bottom: 60px;
+padding-left: 20px;
+padding-right: 20px;
+width:  50%;
+text-align: center;
+margin-top: 80px;
+}
+		
+.Cancel{
+background-color: red;
+color: white;
+border: none; 
+width: 20%;
+padding: 10px;
+float: left;
+}
+		
+.ForgotPassword{
+float: right;
+}
+</style>
+
+<!--  HTML code login -->	
+	<body>
+		<center class="center">
+		<form action="file:///D:/storage/About%20Me.html" target="_self" method="post">
+		<div class="form">
+			<h2 align="left"> Contact Us </h2> 
+			<img src="https://newyorkpcg.org/pcgny/wp-content/uploads/2020/08/its-more-fun.png" alt="picture"> 
+			
+			<br><br>
+			
+			<label>First Name </label>
+			
+			<br>
+						
+		    <input type="text" id="username" name="username" placeholder="Enter your first name" pattern="Ossi" title="Numbers or symbols are not allowed" required> 
+			
+			<br><br>
+						
+			<label>Last Name </label> 
+			
+			<br>
+			
+			<input type="password" id="password" name="password" placeholder="Enter your Last name" pattern="Fulla" title="Numbers or symbols are not allowed" required> 
+		
+			<br><br>
+			
+			<label> Email Address </label> 
+			
+			<input type="password" id="password" name="password" placeholder="Enter your Email Address" pattern="ossifulla@gmail.com" title="Incorrect Email" required>			
+			 
+			<br><br>
+			
+				<label> Comment </label> 
+			
+			<input type="password" id="password" name="password" placeholder="drop down some comments">
+			 		
+			<br><br>
+			 			
+			<button type="submit"> Submit </button>
+		    
+			<br><br>
+						
+			<input type="checkbox" id="rememberme" name="rememberme" value="rememberme">
+			<label style="font-weight: normal" for="rememberme"> Remember me </label> 
+						
+			<br><br>
+			
+				</div>
+				
+			</form>
+			
+		</center>
+		
+	</body>
+	
+</html>
